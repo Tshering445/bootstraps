@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h2 id="heading"></h2>
+        <p id="p1"></p>
+        <script>
+            let str = "javascripts";
+            let l = str.length;
+            let thirdChar = str[2];
+            let x = str.toUpperCase();
+
+            let result = "length: " + l + "<br> the third character: " + thirdChar + "<br>Uppercase: " + x;
+            document.getElementById('heading').innerHTML = str;
+            document.getElementById('p1').innerHTML = result;
+        </script>
+
+        
+    </body>
+</html>
