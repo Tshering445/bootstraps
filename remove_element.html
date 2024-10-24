@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>remove element</title>
+    </head>
+    <body>
+        <div id="mydiv">
+            <p id="para1">para 1</p>
+            <p id="para2">para 2</p>
+            <button onclick="deleteElements()">click here</button>
+        </div>
+        <script>
+            function deleteElements(){
+                let paragraph1 = document.getElementById('para1');
+                paragraph1.remove();
+
+                let parentDiv = document.getElementById('mydiv');
+                let paragraphDiv = document.getElementById('para2');
+
+                parentdiv.removechild(x);
+
+            }
+        </script>
+        
+    </body>
+</html>

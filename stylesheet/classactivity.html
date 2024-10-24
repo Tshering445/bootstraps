@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Scores Table</title>
+    <link rel="stylesheet" href="/stylesheet/classactivity.css">
+</head>
+<body>
+
+    <h1 style="text-align:center;">Processed Student Scores</h1>
+    <table id="student-scores-table">
+        <thead>
+            <tr>
+                <th>Names</th>
+                <th>Scores</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        // Object representing student names and scores
+        const studentScores = {
+            "Sonam": 76,
+            "Pema": 61,
+            "Sangay": 50,
+            "Dechen": 55,
+            "Lhaki": 92,
+            "Karma": null, // This is the null value
+            "Yuden": 81
+        };
+
+        // Function to process student scores and populate the table
+        function processScores(scores) {
+            let tableBody = document.querySelector("#student-scores-table tbody");
+
+            // Loop through each student in the object
+            for (let student in scores) {
+                let score = scores[student];
+
+                // If the score is null, break the loop
+                if (score === null) {
+                    break;
+                }
+
+                // If the score is less than 50, skip this student
+                if (score < 50) {
+                    continue;
+                }
+
+                // Add valid student and score to the table
+                let row = document.createElement("tr");
+
+                let nameCell = document.createElement("td");
+                nameCell.textContent = student;
+                row.appendChild(nameCell);
+
+                let scoreCell = document.createElement("td");
+                scoreCell.textContent = score;
+                row.appendChild(scoreCell);
+
+                tableBody.appendChild(row);
+            }
+        }
+
+        // Call the function to process the scores and display them in the table
+        processScores(studentScores);
+    </script>
+
+</body>
+</html>

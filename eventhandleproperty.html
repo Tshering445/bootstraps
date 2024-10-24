@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eventhandleproperties</title>
+    </head>
+    <body>
+        <button id="mybutton">clickme</button>
+        <div id="mouse">move over me!</div>
+        <div id="down">press the mouse</div>
+        <input  id="key"  type="text" placeholder="username">
+        <input id="name" type="text" placeholder="nickname">
+
+        <script>
+            document.getElementById('mybutton').onclick = function(){
+                alert('button clicked')
+            }
+            document.getElementById('mybutton').onclick = function(){
+                alert('button clicked again')
+            }
+
+            document.getElementById('mouse').onmousemove = function(){
+                this.style.fontstyle='italic'; this.style.color='red';
+            }
+            document.getElementById('down').onmousedown = function(){
+                this.style.textAlign='center';
+            }
+            document.getElementById('key').onkeydown = function(){
+                this.style.backgroundColor='red';
+            }
+            document.getElementById('name').onfocus = function(){
+                this.style.backgroundColor='purple';
+
+            }
+
+        </script>
+        
+    </body>
+</html>

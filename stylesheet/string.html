@@ -13,10 +13,13 @@
             let l = str.length;
             let thirdChar = str[2];
             let x = str.toUpperCase();
+            let y = str.slice(4, 10);
 
-            let result = "length: " + l + "<br> the third character: " + thirdChar + "<br>Uppercase: " + x;
+            let result = "length: " + l + "<br> the third character: " + thirdChar + "<br>Uppercase: " + x + "<br>substring:" + y;
             document.getElementById('heading').innerHTML = str;
             document.getElementById('p1').innerHTML = result;
+            let demo = "java" + "scripts" + 5;
+            console.log(demo)
         </script>
 
         

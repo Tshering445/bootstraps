@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form event attribute</title>
+</head>
+<body onload="alert('page loaded')" onresize="alert('page resized')" onbeforeunload="alert('page will be unloaded')">
+    <input type="text" placeholder="username" onkeydown="this.style.backgroundColor='red'"> <br><br>
+
+    <input type="password" placeholder="password" onkeydown="this.style.backgroundColor='green'"><br><br>
+
+    <input type="text" placeholder="first name" onchange="this.style.textTransform='uppercase'"><br><br>
+
+    <input type="text" placeholder="last name" oninput="this.style.backgroundColor='yellow'"><br><br>
+
+    <input type="text" placeholder="nickname" onfocus="this.style.backgroundColor='purple'"><br><br>
+
+    <input type="text" placeholder="nickname" onblur="this.style.backgroundColor='lightblue'"><br><br>
+
+    <form onsubmit="alert('Form submitted!'); return false;" onreset="alert('Form reset')">
+        <input type="text" placeholder="type here....">
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+    
+
+</body>
+</html>
